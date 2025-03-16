@@ -15,7 +15,11 @@ export default function Chat() {
     const messages = useSelector((state: RootState) => state.chat.messages);
 
     useEffect(() => {
-        const chat = io("wss://89.169.168.253:4500", {
+        // const chat = io("wss://89.169.168.253:4500", {
+        //     transports: ["websocket", "polling"],
+        // });
+
+        const chat = io("wss://potato.ipv6b.my.id:2096", {
             transports: ["websocket", "polling"],
         });
 
